@@ -1,5 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import StatCard from "@/components/dashboard/StatCard";
+import RecentActivity from "@/components/dashboard/widgets/RecentActivity";
+import MarketOverview from "@/components/dashboard/widgets/MarketOverview";
 
 export default function Home() {
   return (
@@ -15,10 +17,7 @@ export default function Home() {
 
       <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-        <StatCard
-          title="Companies"
-          value="158"
-        />
+        <StatCard title="Companies" value="158" />
 
         <StatCard
           title="Countries"
@@ -37,6 +36,14 @@ export default function Home() {
           value="13"
           color="text-rose-400"
         />
+
+      </div>
+
+      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+
+        <RecentActivity />
+
+        <MarketOverview />
 
       </div>
 
